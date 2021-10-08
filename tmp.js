@@ -9,34 +9,41 @@
 
 // const maui = new Vacation('Maui', 7)
 // maui.print()
-class Vacation {
-  constructor(destination, length) {
-    this.destination = destination
-    this.length = length
-  }
+// class Vacation {
+//   constructor(destination, length) {
+//     this.destination = destination
+//     this.length = length
+//   }
 
-  print() {
-    console.log(`${this.destination} will take ${this.length} days.`)
-  }
-}
+//   print() {
+//     console.log(`${this.destination} will take ${this.length} days.`)
+//   }
+// }
 
 
-class Expedition extends Vacation {
-  constructor(destination, length, gear) {
-    super(destination, length)
-    this.gear = gear
-  }
+// class Expedition extends Vacation {
+//   constructor(destination, length, gear) {
+//     super(destination, length)
+//     this.gear = gear
+//   }
 
-  print() {
-    super.print()
-    console.log(`Bring your ${this.gear.join(' and your ')}`)
-  }
-}
+//   print() {
+//     super.print()
+//     console.log(`Bring your ${this.gear.join(' and your ')}`)
+//   }
+// }
 
-const trip = new Expedition('Mt. Whitney', 3, [
-  "sunglasses",
-  "prayer flags",
-  "camera"
-])
+// const trip = new Expedition('Mt. Whitney', 3, [
+//   "sunglasses",
+//   "prayer flags",
+//   "camera"
+// ])
 
-trip.print()
+// trip.print()
+import { print, log } from "./text-helpers";
+import freel from "./mt-freel";
+
+print('printing a message')
+log('logging a message')
+
+freel.print()
