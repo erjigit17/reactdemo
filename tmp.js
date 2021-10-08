@@ -274,12 +274,68 @@
 // const uniqueColors = colors.reduce((unique, color) => unique.indexOf(color) !== -1 ? unique : [...unique, color], [])
 // console.log(uniqueColors)
 
-const invokeIf = (condition, fnTrue, fnFalse) =>
-  condition ? fnTrue() : fnFalse()
+// const invokeIf = (condition, fnTrue, fnFalse) =>
+//   condition ? fnTrue() : fnFalse()
 
-const showWelcome = () => console.log('Welcome!!!')
+// const showWelcome = () => console.log('Welcome!!!')
 
-const showUnauthorized = () => console.log('Unauthorized!!!')
+// const showUnauthorized = () => console.log('Unauthorized!!!')
 
-invokeIf(true, showWelcome, showUnauthorized)
-invokeIf(false, showWelcome, showUnauthorized)
+// invokeIf(true, showWelcome, showUnauthorized)
+// invokeIf(false, showWelcome, showUnauthorized)
+// const getPeople = count =>
+//   new Promise((resolves, rejects) => {
+//     const api = `https://api.randomuser.me/?nat=US&results=${count}`;
+//     const request = new XMLHttpRequest();
+//     request.open("GET", api);
+//     request.onload = () =>
+//       request.status === 200
+//         ? resolves(JSON.parse(request.response).results)
+//         : reject(Error(request.statusText));
+//     request.onerror = err => rejects(err);
+//     request.send();
+//   });
+
+// const userLogs = userName => message =>
+//   console.log(`${userName} -> ${message}`)
+
+// const log = userLogs('grandpa23')
+
+// // log('attempted to load 20 fake members')
+
+// getPeople(20).then(
+//   members => log(`successfully loaded ${members.length} members`),
+//   error => log("encountered an error loading members")
+// )
+
+// const countdown = (value, fn, delay = 1000) => {
+//   fn(value)
+//   return value > 0
+//   ? setTimeout(() => countdown(value - 1, fn), delay)
+//   : value
+// }
+// const log = value => console.log(value)
+// countdown(10, log)
+const deepPick = (fields, object = {}) => {
+  const [first, ...remaining] =fields.split('.')
+  return remaining.length
+    ? deepPick(remaining.join('.'), object[first])
+    : object[first]
+}
+
+const dan = {
+  type: 'person',
+  data: {
+    gender: 'male',
+    info: {
+      id: 22,
+      fullname: {
+        fist: 'Dan',
+        last: 'Deacon'
+      }
+    }
+  }
+}
+
+deepPick('type', dan)
+deepPick('data.info.fullname.fist', dan)
