@@ -172,4 +172,42 @@
 // const Header = props => <h1>{props.title}</h1>
 
 // Header('Header() caused side effects')
-const schools = ["Yorktown", "Washington & Liberty", "Wakefield"];
+// const schools = ["Yorktown", "Washington & Liberty", "Wakefield"]
+// console.log(schools.join(', '))
+
+// const wSchools = schools.filter(school => school[0] ==='W')
+// console.log(wSchools)
+
+// const cutSchool = (cut, list) => list.filter(school => school !== cut )
+// console.log(cutSchool("Washington & Liberty", schools).join(", "))
+// // console.log(schools.join('\n'))
+// // const highSchools = schools.map(school => `${school} High School`)
+// // console.log(highSchools.join('\n'))
+// const highSchools = schools.map(school => ({[schools.indexOf(school)]: school}))
+// console.log(highSchools)
+// const editName = (oldName,  name, arr) =>
+//   arr.map(item => item.name === oldName ? { ...item, name } : item)
+
+// let schools = [
+//   { name: "Yorktown" },
+//   { name: "Stratford" },
+//   { name: "Washington & Liberty" },
+//   { name: "Wakefield" }
+// ];
+// let updatedSchools = editName("Stratford", "HB Woodlawn", schools);
+// console.log(updatedSchools[1]);  // { name: "HB Woodlawn" }
+// console.log(schools[1]);
+
+// const schools = {
+//   Yorktown: 10,
+//   "Washington & Liberty": 2,
+//   Wakefield: 5
+// }
+
+// const schoolArray = Object.keys(schools).map(key => ({
+//   name: key,
+//   wins: schools[key]
+// }))
+// console.log(schoolArray)
+
+const ages = [21, 18, 42, 40, 64, 63, 34];
