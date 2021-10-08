@@ -20,6 +20,23 @@ class Vacation {
   }
 }
 
-const trip = new Vacation('Santiago, Chile', 7)
+
+class Expedition extends Vacation {
+  constructor(destination, length, gear) {
+    super(destination, length)
+    this.gear = gear
+  }
+
+  print() {
+    super.print()
+    console.log(`Bring your ${this.gear.join(' and your ')}`)
+  }
+}
+
+const trip = new Expedition('Mt. Whitney', 3, [
+  "sunglasses",
+  "prayer flags",
+  "camera"
+])
 
 trip.print()
