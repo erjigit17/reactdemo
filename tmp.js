@@ -40,8 +40,8 @@
 // ])
 
 // trip.print()
-import { print, log } from "./text-helpers";
-import freel from "./mt-freel";
+const { print, log } = require("./text-helpers")
+const freel =require("./mt-freel")
 
 print('printing a message')
 log('logging a message')
