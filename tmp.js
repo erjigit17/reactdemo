@@ -40,10 +40,46 @@
 // ])
 
 // trip.print()
-const { print, log } = require("./text-helpers")
-const freel =require("./mt-freel")
+// const { print, log } = require("./text-helpers")
+// const freel =require("./mt-freel")
 
-print('printing a message')
-log('logging a message')
+// print('printing a message')
+// log('logging a message')
 
-freel.print()
+// freel.print()
+
+// const log = message => console.log(message)
+
+// const obj = {
+//   message: 'Lorem Ipsum',
+//   log(message) {
+//     console.log(message)
+//   }
+// }
+
+// obj.log(obj.message)
+// const messages = [
+//   'first message',
+//   message => console.log(message),
+//   'second message',
+//   message => console.log(message)
+// ]
+
+// messages[1](messages[0])
+// messages[3](messages[3])
+
+// const insideFn = logger => {
+//   logger('Lorem Ipsum')
+// }
+
+// insideFn(message => console.log(message))
+
+// const createScream = logger => message => {
+//     logger(message.toUpperCase() + '!!!')
+//   }
+
+// const scream = createScream(message => console.log(message))
+// scream('functions can be returned from other functions')
+// scream('createScream returns a function')
+// scream('scream invokes that returned function')
+
