@@ -210,4 +210,63 @@
 // }))
 // console.log(schoolArray)
 
-const ages = [21, 18, 42, 40, 64, 63, 34];
+// const ages = [21, 18, 42, 40, 64, 63, 34]
+// // const ages = []
+
+// // const maxAge = ages.reduce((max, age) => {
+// //   console.log(`${age} > ${max} = ${age > max}`)
+// //   if (age > max) {
+// //     return age
+// //   } else {
+// //     return  max
+// //   }
+// // }, 0)
+
+// const maxAge = ages.reduce((max, value) =>
+//   (value > max ? value : max), 0)
+
+// console.log('Max age: ', maxAge)
+const colors = [
+  {
+    id: "xekare",
+    title: "rad red",
+    rating: 3
+}, {
+    id: "jbwsof",
+    title: "big blue",
+    rating: 2
+}, {
+    id: "prigbj",
+    title: "grizzly grey",
+    rating: 5
+}, {
+    id: "ryhbhsl",
+    title: "banana",
+    rating: 1
+} ]
+
+const hashColors = colors.reduce((hash, {id, title, rating}) => {
+  hash[id] = { title, rating}
+  return hash
+}, {})
+// console.log(hashColors)
+
+
+
+
+// const dic = array.reduce((result, value) =>{
+
+//   result[array.indexOf(value)] = value
+//   return result
+// }, {})
+
+// let array = ['item1', 'item2', 'item3']
+
+// const arrToObj = (arr) => {
+//   return arr.reduce((obj, value) => {
+//     obj[arr.indexOf(value)] = value
+//     return obj
+//   }, {})
+// }
+
+// console.log(arrToObj(array))
