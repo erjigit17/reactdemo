@@ -84,7 +84,7 @@
 // scream('scream invokes that returned function')
 
 
-const string = 'Restaurants in Hanalei';
+// const string = 'Restaurants in Hanalei';
 // let urlFriendly = "";
 // for (let i = 0; i < string.length; i++) {
 //   if (string[i] === ' ') {
@@ -94,4 +94,24 @@ const string = 'Restaurants in Hanalei';
 //   }
 // }
 
-console.log(([...string].map(item => item === ' ' ? '-' : item)).join(''))
+// console.log(([...string].map(item => item === ' ' ? '-' : item)).join(''))
+// const urlFriendly = string.replace(/ /g, '-')
+// console.log(urlFriendly)
+// const target = document.getElementById('target')
+// const wrapper = document.createElement('div')
+// const headline = document.createElement('h1')
+
+// wrapper.id = 'welcome'
+// headline.innerHTML = 'Hello World'
+// wrapper.appendChild(headline)
+// target.appendChild(wrapper)
+
+const { render } = ReactDom
+
+const Welcome = () => (
+  <div id="welcome">
+    <h1>Hello World</h1>
+  </div>
+)
+
+render(<Welcome />, document.getElementById('target'))
